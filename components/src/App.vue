@@ -1,4 +1,5 @@
 <script setup>
+import Button from './components/Button.vue'
 </script>
 
 <template>
@@ -11,10 +12,10 @@
       <p class="mb-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis corporis mollitia fugit dolor quibusdam atque qui fuga laudantium aut porro.
       </p>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Button
-      </button>
-      <Button color="orange" label="Click me"/>
+      
+      <Button label="Click Me"/> <br/><br/>
+      <Button label="Again Click Me"/>
+
     </div>
     
   </div>
