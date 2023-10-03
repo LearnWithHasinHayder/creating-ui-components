@@ -13,8 +13,9 @@ import Button from './components/Button.vue'
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis corporis mollitia fugit dolor quibusdam atque qui fuga laudantium aut porro.
       </p>
       
-      <Button label="Click Me"/> <br/><br/>
-      <Button label="Again Click Me"/>
+      <Button label="Click"/> <br/><br/>
+      <Button color="orange"/> <br/><br/>
+      <Button color="red" label="Again Click Me"/>
 
     </div>
     
