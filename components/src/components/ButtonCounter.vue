@@ -2,20 +2,20 @@
 import {ref} from 'vue'
 
 const props = defineProps({
-    count: {
-        type: Number,
+    start:{
+        type: String,
         default: 0
-    },
+    }
 })
 
-const counter = ref(props.count)
+const count = ref(props.start)
 
 function increase(){
-    counter.value++
+    count.value++
 }
 
 function decrease(){
-    counter.value--
+    count.value--
 }
 </script>
  
@@ -24,7 +24,7 @@ function decrease(){
         +
     </button>
     <span class="px-5"> 
-        {{ counter }} 
+        {{ count }} 
     </span>
     <button @click="decrease()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         -

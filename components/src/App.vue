@@ -14,9 +14,8 @@ import ButtonCounter from './components/ButtonCounter.vue'
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis corporis mollitia fugit dolor quibusdam atque qui fuga laudantium aut porro.
       </p>
       
-      <ButtonCounter count="16"/><br/><br/>
-      <button-counter count="7"/><br/><br/>
-      <button-counter /><br/><br/>
+      <ButtonCounter start="16" /><br/><br/>
+      <button-counter start="7"/><br/><br/>
 
     </div>
     
