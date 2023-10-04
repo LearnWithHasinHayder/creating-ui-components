@@ -2,23 +2,70 @@
 import Button from './components/Button.vue'
 import ButtonCounter from './components/ButtonCounter.vue'
 import Location from './components/Location.vue'
-
-const data = [
+import ApplicantDetails from './components/ApplicantDetails.vue'
+const people = [
   {
-    image:"https://images.unsplash.com/photo-1615319532762-b4ccc69e5abf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA3fHxsYW5kc2NhcGV8ZW58MHx8MHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=100",
-    location:"California",
-    price:87,
-    rating:4,
-    time:15,
-    title:"Photo by Drew Dao",
+    name:'Margot Foster',
+    position:'Backend Developer',
+    email:'margotfoster@example.com',
+    salary:'$120,000',
+    about:'Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.',
+    attachments:[
+      {
+        name:'resume_back_end_developer.pdf',
+        size:'256kb',
+        type:'PDF',
+        url:'#'
+      },
+      {
+        name:'coverletter_back_end_developer.pdf',
+        size:'128kb',
+        type:'PDF',
+        url:'#'
+      }
+    ]
   },
   {
-    image:"https://images.unsplash.com/photo-1562981943-dda9d14477f0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE4fHxsYW5kc2NhcGV8ZW58MHx8MHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=100",
-    location:"San Diego, California",
-    price:75,
-    rating:4,
-    time:21,
-    title:"Photo by Trent Haaland",
+    name:'John Doe',
+    position:'Frontend Developer',
+    email:'john@doe.com',
+    salary:'$100,000',
+    about:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    attachments:[
+      {
+        name:'resume_front_end_developer.pdf',
+        size:'1MB',
+        type:'PDF',
+        url:'#'
+      },
+      {
+        name:'coverletter_front_end_developer.pdf',
+        size:'512kb',
+        type:'PDF',
+        url:'#'
+      }
+    ]
+  },
+  {
+    name:'Jane Doe',
+    position:'Designer',
+    email:'jane@doe.com',
+    salary:'$110,000',
+    about:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Here is some more text.',
+    attachments:[
+      {
+        name:'resume_designer.pdf',
+        size:'5MB',
+        type:'PDF',
+        url:'#'
+      },
+      {
+        name:'coverletter_designer.pdf',
+        size:'2MB',
+        type:'PDF',
+        url:'#'
+      }
+    ]
   }
 ]
 </script>
@@ -29,21 +76,13 @@ const data = [
       <img class="logo" src="./assets/vue.svg" alt="Vue logo" />
       <h1 class="text-2xl">Vue Components</h1>
     </div>
-    <section class="p-10 md:py-20 px-5 ">
-      <section class="flex space-x-10">
+    <section class="mx-auto mt-10">
+      <ApplicantDetails :applicants="people"/>
+  </section>
 
-        <!-- <Location v-for="item in data" :key="item.title" :image="item.image" :location="item.location" :price="item.price" :rating="item.rating" :time="item.time" :title="item.title" /> -->
-        <Location v-for="item in data" :key="item.title" v-bind="item" />
+</div></template>
 
-      </section>
-
-    </section>
-
-  </div>
-</template>
-
-<style scoped>
-.logo {
+<style scoped>.logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -56,5 +95,4 @@ const data = [
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+}</style>
